@@ -1,0 +1,114 @@
+<!--<div style="display: inline-block; width: 180px; text-align: center; background: #fff; margin: -20px 0 10px 20px">
+  <a href="http://kaihost.ru" target="_blank"><p style="text-align: center;"><img src="http://kaihost.ru/img/logo.png"></p>
+  <p style="font: 11px Tahoma; text-align: center;">разработка и обслуживание web-сайтов</p></a>
+</div>-->
+<?php ob_start(); ?>
+<div style="background: url(http://kaihost.ru/img/background/bg-main.gif); padding: 10px">
+  <div style="margin: 0 auto; width: 700px; background: #fff; padding: 10px; border: 4px solid #E9ECF0;">
+  <a href="http://kaihost.ru/" target="_blank"><img alt="" src="http://kaihost.ru/img/logo.png" /></a>
+<p style="font: 13px Arial;">Качественно и в короткие сроки создадим сайт под Ваши нужды, используя современные WEB - технологии.</p>
+
+<p style="font: 13px Arial; margin: 0px;">Мы предлагаем следующие услуги:</p>
+    <div style="font: 13px Verdana; padding: 10px;">
+      <img alt="" src="http://kaihost.ru/img/mini/develop.png" style="float: left;"/>
+      <div style="margin-left: 40px;"><strong>Разработка</strong><p style="margin: 0px;">Используя свежие дизайнерские идеи и новейшие технологии мы сделаем Ваш сайт эффективным средством в продвижении товаров и услуг.</p></div>
+    </div>
+    <hr style=" clear: both; border: 0px; border-bottom: 1px solid #dddddd;">
+    <div style="font: 13px Verdana; padding: 10px;">
+      <img alt="" src="http://kaihost.ru/img/mini/service.png" style="float: left;"/>
+      <div style="margin-left: 40px;"><strong>Обслуживание</strong><p style="margin: 0px;">Круглосуточная поддержка Вашего сайта в актуальном состоянии.</p></div>
+    </div>
+    <hr style=" clear: both; border: 0px; border-bottom: 1px solid #dddddd;">
+    <div style="font: 13px Verdana; padding: 10px;">
+      <img alt="" src="http://kaihost.ru/img/mini/hosting.png" style="float: left;"/>
+      <div style="margin-left: 40px;"><strong>Хостинг</strong><p style="margin: 0px;">Размещение Вашего сайта на нашем сервере.</p></div>
+    </div>
+    <hr style=" clear: both; border: 0px; border-bottom: 1px solid #dddddd;">
+    <p style="font: 13px Arial; margin: 0px;">Связаться с нами можете:</p>
+    <div style="font: 13px Verdana; padding: 10px;">
+      <div><strong>Телефон:</strong> +7 (904) 465 05 95</div>
+    </div>
+    <div style="font: 13px Verdana; padding: 10px;">
+      <div><strong>ICQ:</strong> 596 171 588</div>
+    </div>
+    <div style="font: 13px Verdana; padding: 10px;">
+      <div><strong>E-mail:</strong> master@kaihost.ru</div>
+    </div>
+    <div style="font: 13px Verdana; padding: 10px;">
+      <div><strong>Skype:</strong> kaiwex</div>
+    </div>
+    <div style="font: 13px Verdana; padding: 10px;">
+      <div><strong>Наш сайт:</strong> <a href="http://kaihost.ru" target="_blank" style="color: #0088cc; text-decoration: none;">http://kaihost.ru</a></div>
+    </div>
+  </div>
+</div>
+
+<?php
+$body = ob_get_clean();
+echo $body;
+$tr = new Zend_Mail_Transport_Smtp('smtp.yandex.ru', array(
+	'port' => 25,
+	'auth' => 'login',
+	'username' => 'master@kaihost.ru',
+	'password' => 'Vbmr3qLM'
+));
+Zend_Mail::setDefaultTransport($tr);
+
+$mail = new Zend_Mail('utf-8');
+$mail->setBodyHtml($body);
+$mail->setFrom('master@kaihost.ru', 'KaiHost');
+$mail->addTo('eni.basic@gmail.com');
+
+/*$mail->addTo('ootde1@urai.ru');
+$mail->addTo('licey@pip.ru');
+$mail->addTo('mu.bvl.uray@gmail.com');
+$mail->addTo('super.shkola-remesel@yandex.ru');
+$mail->addTo('raduga@pip.ru');
+$mail->addTo('ProfTeh20@mail.ru');
+$mail->addTo('ogps16@pip.ru');
+$mail->addTo('skvnss@mail.ru');
+$mail->addTo('466.@list.ru');
+$mail->addTo('sonata@pip.ru');
+$mail->addTo('uraiskoe-TU@yandex.ru');
+$mail->addTo('kultura@pip.ru');
+$mail->addTo('deti@pip.ru');
+$mail->addTo('fis-ok@mail.ru');
+$mail->addTo('ds-start2011@yandex.ru');
+$mail->addTo('school6@edu.uray.ru');
+$mail->addTo('stomu@yandex.ru');
+$mail->addTo('uo@uray.ru');
+$mail->addTo('kadry1@uraycgb.ru');
+$mail->addTo('i860600@r86.nalog.ru');
+$mail->addTo('stomv@yandex.ru');
+$mail->addTo('uray.tv@uray.ru');
+$mail->addTo('uraycgb@pip.com.ru');
+$mail->addTo('mup-ru-urai@mail.ru');
+$mail->addTo('lyudmila_kuznecjva_2012@inbox.ru');
+$mail->addTo('vodokanal_urai@mail.ru');
+$mail->addTo('roadboss@inbox.ru');
+$mail->addTo('sla61941@yandex.ru');
+$mail->addTo('uatp@pip.ru');
+$mail->addTo('volchok@wsmail.ru');
+$mail->addTo('shaimgaz@mail.ru');
+$mail->addTo('utec@wsmail.ru');
+$mail->addTo('garant@pip.ru');
+$mail->addTo('zsi-86@mail.ru');
+$mail->addTo('invest5@wsmail.ru');
+$mail->addTo('ndsok@mail.ru');
+$mail->addTo('50179@tyumen.xgs.ru');
+$mail->addTo('rgs6749@urai.wsnet.ru');
+$mail->addTo('siituray@gmail.com');
+$mail->addTo('smaile.urai@rambler.ru');
+$mail->addTo('cbpo@inbox.ru');
+$mail->addTo('ugrs-urai@yandex.ru');
+$mail->addTo('uras-urai@yandex.ru');
+$mail->addTo('utar@pip.ru');
+$mail->addTo('uraiszn@pip.ru');
+$mail->addTo('mail@uray.ugsr.ru');
+$mail->addTo('fgupurai@mail.ru');*/
+
+//$mail->addTo('eni.pro@ya.ru');
+//$mail->addTo('alex_b88@mail.ru');
+$mail->setSubject('Выгодное предложение');
+//$mail->send();
+?>

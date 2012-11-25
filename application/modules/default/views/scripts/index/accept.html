@@ -1,0 +1,29 @@
+<div class="row-fluid">
+  <div class="span12">
+    <div class="content">
+      <div class="body">
+        <div class="header">Подтверждение заказа</div>
+        <?php echo $this->message ?>
+        <hr>
+        <p>Пожалуйста, укажите Ваши данные и подтвердите заказ.</p><br>
+        <div id="form"><?php echo $this->form ?></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$('#user-data').live('submit', function() {
+  var data = $(this).serializeArray();
+  data[2]['value'] = $('#order-message').html() + $('#description', this).val();
+  $('#accept', this).button('loading');
+  $.post('/default/index/mail', data, function(response) {
+    if (response == 'ok') {
+      $('.body').html('<p>Спасибо за Ваш заказ. Мы свяжимся с Вами в ближайшее время. <a href="/">Перейти на главную</a></p>');
+    } else {
+      $('#form').html(response);
+      $('#accept', this).button('reset');
+    }
+  });
+  return false;
+});
+</script>

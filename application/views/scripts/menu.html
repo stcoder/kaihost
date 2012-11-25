@@ -1,0 +1,29 @@
+<ul class="nav nav-pills pull-right">
+  <?php foreach($this->container as $page): ?>
+    <?php
+      $class = $page->isActive(true) ? 'active' : '';
+      $pages = $page->getPages();
+      $class .= $pages ? ' dropdown' : '';
+    ?>
+    <li class="<?php echo $class ?>">
+      <?php if($pages): ?>
+      <a class="dropdown-toggle"
+         data-toggle="dropdown"
+         href="#"><?php echo $page->getLabel() ?><b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <?php foreach($pages as $subPage): ?>
+          <?php
+            $subPageClass = $subPage->isActive(true) ? 'active' : '';
+          ?>
+          <li class="<?php echo $subPageClass ?>">
+            <a href="<?php echo $subPage->getHref() ?>"><?php echo $subPage->getLabel() ?></a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+      <?php else: ?>
+        <a href="<?php echo $page->getHref() ?>"><?php echo $page->getLabel() ?></a>
+      <?php endif; ?>
+    </li>
+  <?php endforeach; ?>
+</ul>

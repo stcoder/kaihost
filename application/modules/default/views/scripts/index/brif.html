@@ -1,0 +1,396 @@
+<div class="row-fluid" xmlns="http://www.w3.org/1999/html">
+  <div class="span12">
+    <div class="content">
+      <div class="body">
+        <h3>Конструтор заказа</h3>
+        <div class="alert alert-info">
+          <div class="media">
+            <img class="pull-left media-object" src="/img/info.png" style="margin-top: 4px;">
+            <div class="media-body">
+              <p>Ниже Вы можете сконструировать свой будущий сайт и узнать приблизительную стоимость работ.</p>
+              <p>Точная стоимость работ и детали проекта обсуждаются при встрече.</p>
+            </div>
+          </div></div>
+        <div class="header">Разработка</div>
+        <div class="media">
+          <div class="media-body">
+            <ul class="nav nav-tabs" id="myTab">
+              <li class="active"><a href="#key">Сайт под ключ</a></li>
+              <li><a href="#cms">Установка и настройка CMS</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="key">
+              <form name="key" method="post" action="/accept" id="form-key">
+                <table class="table table-bordered table-striped table-hover" id="list_key">
+                  <tr>
+                    <td colspan="3"><strong>Выберите тип сайта</strong></td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="radio" name="type" data-price="1000" value="type1" checked></td>
+                    <td>Визитка</td>
+                    <td width="150">1 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="type" data-price="1000" value="type2"></td>
+                    <td>Презентационный</td>
+                    <td>1 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="type" data-price="5000" value="type3"></td>
+                    <td>Блог</td>
+                    <td>5 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="type" data-price="6000" value="type4"></td>
+                    <td>Корпоративный</td>
+                    <td>6 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="type" data-price="10000" value="type5"></td>
+                    <td>Интернет-магазин</td>
+                    <td>10 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="type" data-price="25000" value="type6"></td>
+                    <td>Информационный-портал</td>
+                    <td>25 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><strong>Выберите оформление</strong></td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="decor" data-price="700" value="decor1" checked></td>
+                    <td>Строгое оформление, минимум графики</td>
+                    <td>700 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="decor" data-price="2700" value="decor2"></td>
+                    <td>Обычное оформление, среднее количество графики</td>
+                    <td>2 700 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="decor" data-price="5000" value="decor3"></td>
+                    <td>Креативное оформление, максимум графики</td>
+                    <td>5 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><strong>Выберите структуру дизайна</strong></td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="design-structure" data-price="500" value="design-structure1" checked></td>
+                    <td><p>Легкая. Содержит 1, 2 колонки. Подходит для сайтов: Визитка, Презентационный, Блог</p></td>
+                    <td>500 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="design-structure" data-price="1000" value="design-structure2"></td>
+                    <td>Обычная. Содержит 2, 3 колонки. Подходит для сайтов: Блог, Корпоротивный</td>
+                    <td>1 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="radio" name="design-structure" data-price="3000" value="design-structure3"></td>
+                    <td><p>Сложная. Содержит 2, 3 колонки. Присутствуют различные элементы управления для взаимодействия с пользователем.
+                      Подходит для сайтов: Блог, Корпоротивный, Интернет-магазин, Информационный-портал</p></td>
+                    <td>3 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><strong>Выберите интерисующие Вас модули</strong></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="page" checked data-price="100" value="page"></td>
+                    <td>Страницы</td>
+                    <td>100 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="feedback" data-price="100" value="feedback"></td>
+                    <td>Обратная связь - отправка сообщения Вам на e-mail с Вашего сайта</td>
+                    <td>100 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="image-slider" data-price="200" value="image-slider"></td>
+                    <td>Слайдер картинок</td>
+                    <td>200 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="micro-news" data-price="500" value="micro-news"></td>
+                    <td>Микро-новости, публикация небольших новостей</td>
+                    <td>500 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="soc-auth" data-price="500" value="soc-auth"></td>
+                    <td>Авторизация для пользователей через социальные сети: facebook, vk, tweeter, g+</td>
+                    <td>500 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="photos" data-price="500" value="photos"></td>
+                    <td>Фото-галерея</td>
+                    <td>500 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="brif" data-price="1000" value="brif"></td>
+                    <td>Бриф</td>
+                    <td>1 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="catalog" data-price="3000" value="catalog"></td>
+                    <td>Каталог-продукций</td>
+                    <td>3 000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="player" data-price="500" value="player"></td>
+                    <td>Аудио и видео плеер</td>
+                    <td>500 руб.</td>
+                  </tr>
+                </table>
+                <h4>Стоимость: <span id="price_key"></span> руб.</h4>
+                <input type="hidden" name="hash" value="key">
+                <div style="text-align: center;"><button type="submit" class="btn btn-large btn-primary">Заказать</button></div>
+              </form>
+              </div>
+              <div class="tab-pane" id="cms">
+                <form name="cms" action="/accept" method="post" id="form-cms">
+                <table class="table table-bordered table-striped table-hover" id="list_cms">
+                  <tr>
+                    <td colspan="3"><strong>Выберите систему управления сайтом для установки</strong></td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="radio" name="cms" data-price="50" value="cms1"></td>
+                    <td><strong>DLE</strong>
+                      <p><a href="http://dle-news.ru/" target="_blank">Оффициальный сайт</a></p>
+                      <p>Стоимость базовой лицензии: 59$</p>
+                      <p>Стоимость расширенной лицензии: 78$</p>
+                    </td>
+                    <td width="150">50 руб.</td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="radio" name="cms" data-price="50" value="cms2"></td>
+                    <td><strong>Joomla</strong>
+                      <p><a href="http://joomla.ru/" target="_blank">Оффициальный русский сайт</a></p>
+                    </td>
+                    <td width="150">50 руб.</td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="radio" name="cms" data-price="50" value="cms3"></td>
+                    <td><strong>Drupal</strong>
+                      <p><a href="http://drupal.ru/" target="_blank">Оффициальный русский сайт</a></p>
+                    </td>
+                    <td width="150">50 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><strong>Выберите систему управления блогом для установки</strong></td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="checkbox" name="blog" data-price="50" value="blog1"></td>
+                    <td><strong>Wordpress</strong>
+                      <p><a href="http://ru.wordpress.org/" target="_blank">Оффициальный русский сайт</a></p>
+                    </td>
+                    <td width="150">50 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><strong>Выберите систему управления форумом для установки</strong></td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="radio" name="forum" data-price="50" value="forum1"></td>
+                    <td><strong>phpBB</strong>
+                      <p><a href="http://www.phpbbguru.net/" target="_blank">Оффициальный русский сайт</a></p>
+                    </td>
+                    <td width="150">50 руб.</td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="radio" name="forum" data-price="500" value="forum2"></td>
+                    <td><strong>Invision Power Board (IP.Board)</strong>
+                      <p>Стоимость лицензии: 175$</p>
+                      <p><a href="http://www.invisionpower.com/" target="_blank">Оффициальный сайт</a></p>
+                    </td>
+                    <td width="150">500 руб.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><strong>Настройка</strong></td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="checkbox" name="settings" data-price="1000" value="settings"></td>
+                    <td>Настройка системы управления сайтом</td>
+                    <td width="150">1000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="checkbox" name="install-module" data-price="500" value="install-module"></td>
+                    <td>Установка дополнительных модулей</td>
+                    <td width="150">500 руб.</td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="checkbox" name="install-template" data-price="100" value="install-template"></td>
+                    <td>Установка шаблонов</td>
+                    <td width="150">100 руб.</td>
+                  </tr>
+                  <tr>
+                    <td width="10"><input type="checkbox" name="create-template" data-price="2000" value="create-template"></td>
+                    <td>Создание шаблона</td>
+                    <td width="150">от 2 000 руб.</td>
+                  </tr>
+                </table>
+                <h4>Стоимость: <span id="price_cms"></span> руб.</h4>
+                <input type="hidden" name="hash" value="cms">
+                <div style="text-align: center;"><button type="submit" class="btn btn-large btn-primary">Заказать</button></div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="header">Обслуживание</div>
+        <div class="media">
+          <div class="media-body">
+            <form name="cms" action="/accept" method="post" id="form-service">
+              <table class="table table-bordered table-striped table-hover" id="list_service">
+                <tr>
+                  <td colspan="3"><strong>Разовые услуги по обслуживанию сайта</strong></td>
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox" name="create-page" data-price="100" value="create-page"></td>
+                  <td>Создание новой страницы</td>
+                  <td width="150">100 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="del-page" data-price="100" value="del-page"></td>
+                  <td>Удаление старой страницы</td>
+                  <td>100 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="update-page" data-price="250" value="update-page"></td>
+                  <td>Обновление информации</td>
+                  <td>250 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="add-media" data-price="500" value="add-media"></td>
+                  <td>Добавление графических, видео и аудио материалов</td>
+                  <td>500 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="install-module" data-price="500" value="install-module"></td>
+                  <td>Установка модуля</td>
+                  <td>500 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="config-module" data-price="300" value="config-module"></td>
+                  <td>Настройка модуля</td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="del-module" data-price="100" value="del-module"></td>
+                  <td>Удаление модуля</td>
+                  <td>100 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="create-module" data-price="5000" value="create-module"></td>
+                  <td>Разработка модуля <small>(цена зависит от сложности)</small></td>
+                  <td>от 5000 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="edit-template" data-price="600" value="edit-template"></td>
+                  <td>Незначительные изменения в дизайне</td>
+                  <td>600 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="new-template" data-price="1000" value="new-template"></td>
+                  <td>Смена дизайна</td>
+                  <td>1000 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="create-template" data-price="3000" value="create-template"></td>
+                  <td>Разработка нового дизайна <small>(цена зависит от сложности)</small></td>
+                  <td>от 3000 руб.</td>
+                </tr>
+                <tr>
+                  <td colspan="3"><strong>Тарифы на месячное обслуживание сайта</strong></td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="tarif" data-price="3500" value="classic"></td>
+                  <td>
+                    <p><strong>Классический</strong></p>
+                    <ul>
+                      <li>Обновление информации на сайте</li>
+                      <li>Создание новых и удаление старых страниц</li>
+                      <li>Добавление графических, видео и аудио материалов</li>
+                    </ul>
+                  </td>
+                  <td>3 500 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="tarif" data-price="6500" value="universal"></td>
+                  <td>
+                    <p><strong>Универсальный</strong></p>
+                    <ul>
+                      <li>Обновление информации на сайте</li>
+                      <li>Создание новых и удаление старых страниц</li>
+                      <li>Добавление графических, видео и аудио материалов</li>
+                      <li>Настройка модулей</li>
+                      <li>Незначительные изменения в дизайне</li>
+                    </ul>
+                  </td>
+                  <td>6 500 руб.</td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="tarif" data-price="9500" value="professional"></td>
+                  <td>
+                    <p><strong>Профессиональный</strong></p>
+                    <ul>
+                      <li>Обновление информации на сайте</li>
+                      <li>Создание новых и удаление старых страниц</li>
+                      <li>Добавление графических, видео и аудио материалов</li>
+                      <li>Настройка модулей</li>
+                      <li>Установка модулей</li>
+                      <li>Удаление модулей</li>
+                      <li>Незначительные изменения в дизайне</li>
+                    </ul>
+                  </td>
+                  <td>9 500 руб.</td>
+                </tr>
+              </table>
+              <h4>Стоимость: <span id="price_service">0</span> руб.</h4>
+              <input type="hidden" name="hash" value="service">
+              <div style="text-align: center;"><button type="submit" class="btn btn-large btn-primary">Заказать</button></div>
+            </form>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var key = 'key';
+$('#myTab a:first').tab('show');
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+  key = e.target.hash.substr(1);
+  checkPrice(key);
+  $('#list_' + key + ' input').click(function() {
+    checkPrice(key);
+  });
+});
+
+function checkPrice(key) {
+  var checked = $('#list_' + key + ' input:checked'), price = 0;
+  $.each(checked, function(){
+    price = parseInt($(this).attr('data-price')) + price;
+  });
+  $('#price_' + key).text(price);
+}
+
+checkPrice(key);
+$('#list_' + key + ' input').click(function() {
+  checkPrice(key);
+});
+
+checkPrice('service');
+$('#list_service input').click(function() {
+  checkPrice('service');
+});
+
+$('#form-key, #form-cms, #form-service').submit(function(e) {
+  if (!$(this).serialize()) {
+    return false;
+  }
+});
+</script>
