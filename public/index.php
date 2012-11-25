@@ -96,7 +96,7 @@ $router->addRoute('accept', new Zend_Controller_Router_Route('/accept', array(
 	'action' => 'accept'
 )));
 
-/*$translator = new Zend_Translate(
+$translator = new Zend_Translate(
 	array(
 		'adapter' => 'array',
 		'content' => '../resources/languages',
@@ -105,7 +105,7 @@ $router->addRoute('accept', new Zend_Controller_Router_Route('/accept', array(
 	)
 );
 Zend_Validate_Abstract::setDefaultTranslator($translator);
-*/
+
 $front->setRouter($router);
 
 // Switch off error handler plugin
